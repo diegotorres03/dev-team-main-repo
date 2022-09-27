@@ -16,7 +16,7 @@ let resultado = suma(1,2) // esto retorna 3 y lo guarda en la variable resultado
 ```js
 
 function irPorAgua(cantidad) {
-    console.log('recogiendo', cantidad, 'mililitros')
+    console.log('recogiendo', cantidad, 'mililitros de agua')
 }
 
 function calentarAgua() {
