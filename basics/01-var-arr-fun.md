@@ -42,7 +42,7 @@ function hecharleLeche(conLeche) {
     }
 }
 
-function hacerTinto(cuantasDeAzucar, cuantaAgua, conLeche) {
+function hacerCafecito(cuantasDeAzucar, cuantaAgua, conLeche) {
     irPorAgua(cuantaAgua)
     calentarAgua()
     irPorCafe()
@@ -53,7 +53,7 @@ function hacerTinto(cuantasDeAzucar, cuantaAgua, conLeche) {
     return 'cafecito'
 }
 
-let cafecito = hacerTinto(2, 300, false)
+let cafecito = hacerCafecito(2, 300, false)
 console.log(cafecito)
 
 ```
