@@ -1,0 +1,34 @@
+type UserSession {
+    id: ID!
+    recordType: String!
+    level: Number!
+}
+
+type Message {
+    id: ID!
+    recordType: String!
+    message: String
+}
+
+
+type Room {
+    id: ID!
+    recordType: String!
+    users: [UserSession]!
+}
+
+
+input RoomInput {
+    id: ID!
+    recordType: String!
+    users: [UserSession]!
+}
+
+
+type Query {
+    getRoomUsers(): [UserSession]
+}
+
+type Mutation {
+  createRoom(room: RoomInput!): Room
+}

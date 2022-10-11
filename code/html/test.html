@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>titulos</h1>
+<p>Lorem ipsum <b>dolor sit amet consectetur</b>, adipisicing elit. Odit eos ullam quo fuga animi dolores accusantium, quibusdam veritatis, ipsam ut voluptas officiis vel quisquam cumque possimus sapiente unde ratione ad.</p>
+
+<input type="text" name="" id="add-input">
+<button id="add-btn">add</button>
+<ul id="lista">
+    <li>asdasd <button>remove</button> </li>
+    <li>asdasd <button>remove</button> </li>
+    <li>asdasd <button>remove</button> </li>
+    <li>asdasd <button>remove</button> </li>
+    <li>asdasd <button>remove</button> </li>
+</ul>
+
+<script>
+    let lista = document.getElementById('lista')
+
+    let addBtn = document.getElementById('add-btn')
+    let addInput = document.getElementById('add-input')
+    addBtn.addEventListener('click', function (event){
+        console.log(event)
+        let li = document.createElement('li')
+        li.innerHTML = addInput.value + `<button class="remove-item-btn">remove</button> `
+        lista.appendChild(li)
+    })
+
+    console.log(lista)
+    let arr = Array.from(lista.children)
+    console.log(arr)
+</script>
+
+
+</body>
+</html>

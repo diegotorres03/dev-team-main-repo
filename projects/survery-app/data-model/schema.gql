@@ -1,0 +1,23 @@
+# https://graphql.org/learn/schema/
+
+type UserSession {
+    id: ID!
+    recordType: String!
+    level: String!
+}
+
+input UserSessionInput {
+    id: ID!
+    recordType: String!
+    level: String!
+}
+
+
+type Query {
+    getUserSessions: [UserSession]
+    getUserSession(id: String!): UserSession
+}
+
+type Mutation {
+  createSession(id: UserSessionInput!): UserSession
+}
